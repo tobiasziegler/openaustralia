@@ -1,5 +1,7 @@
 # openaustralia
 
+[![Travis-CI Build Status](https://travis-ci.org/tobiasziegler/openaustralia.svg?branch=master)](https://travis-ci.org/tobiasziegler/openaustralia)
+
 ## Overview
 
 `openaustralia` provides an R interface to the API for
