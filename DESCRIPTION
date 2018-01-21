@@ -11,8 +11,10 @@ Description: An R interface to the API for OpenAustralia.org.au. This package
 License: GPL-3 | file LICENSE
 URL: https://github.com/tobiasziegler/openaustralia
 BugReports: https://github.com/tobiasziegler/openaustralia/issues
-Depends: 
+Depends:
     R (>= 3.4.3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
+Imports: httr,
+    jsonlite
