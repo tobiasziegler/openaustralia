@@ -59,5 +59,11 @@ call_api <- function(endpoint, ...) {
     stop(df$error)
   }
 
-  df
+  as.data.frame(df)
+}
+
+params_from_call <- function(mcall) {
+  lst <- as.list(mcall)
+  lst$endpoint <- deparse(lst[[1]]) # add endpoint to list
+  lst[2:length(lst)] # remove specious unnamed first element
 }
