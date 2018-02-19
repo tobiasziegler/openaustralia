@@ -2,6 +2,7 @@
 
 export(call_api)
 export(get_api_key)
+export(get_debates)
 export(get_divisions)
 export(get_representative)
 export(get_representatives)
