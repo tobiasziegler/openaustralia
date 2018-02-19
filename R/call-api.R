@@ -59,7 +59,7 @@ call_api <- function(endpoint, ...) {
     stop(df$error)
   }
 
-  as.data.frame(df)
+  tibble::as_tibble(df)
 }
 
 params_from_call <- function(mcall) {
