@@ -15,5 +15,6 @@ get_divisions <- function(postcode = NULL, date = NULL, search = NULL) {
 #' @rdname get_divisions
 getDivisions <- function(postcode = NULL, date = NULL, search = NULL) {
   params <- params_from_call(match.call())
-  do.call("call_api", params)
+  robj <- do.call("call_api", params)
+  tibble::as_tibble(robj)
 }
