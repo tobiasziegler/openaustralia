@@ -55,8 +55,8 @@ call_api <- function(endpoint, ...) {
   robj <- jsonlite::fromJSON(content, flatten = TRUE)
 
   # API errors return 200 but provide a field in the json
-  if ("error" %in% names(df)) {
-    stop(df$error)
+  if ("error" %in% names(robj)) {
+    stop(robj$error)
   }
 
   robj
