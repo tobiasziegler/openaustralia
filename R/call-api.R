@@ -52,7 +52,10 @@ call_api <- function(endpoint, ...) {
   # The server actually offers text/javascript; ; charset=iso-8859-1 :-/
 
   content <- httr::content(response)
-  robj <- jsonlite::fromJSON(content)
+  robj <- jsonlite::fromJSON(
+    content,
+    simplifyVector = FALSE
+    )
 
   # API errors return 200 but provide a field in the json
   if ("error" %in% names(robj)) {
