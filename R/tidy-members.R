@@ -29,34 +29,34 @@ tidy_members <- function(data) {
 #' @return A tibble with each member represented by one row
 tibble_members <- function(data, has_office) {
   tibble::tibble(
-    member_id = purrr::map_chr(data, "member_id"),
-    house = purrr::map_chr(data, "house"),
-    first_name = purrr::map_chr(data, "first_name"),
-    last_name = purrr::map_chr(data, "last_name"),
-    constituency = purrr::map_chr(data, "constituency"),
-    party = purrr::map_chr(data, "party"),
-    entered_house = purrr::map_chr(data, "entered_house"),
-    left_house = purrr::map_chr(data, "left_house"),
-    entered_reason = purrr::map_chr(data, "entered_reason"),
-    left_reason = purrr::map_chr(data, "left_reason"),
-    person_id = purrr::map_chr(data, "person_id"),
-    title = purrr::map_chr(data, "title"),
-    lastupdate = purrr::map_chr(data, "lastupdate"),
-    full_name = purrr::map_chr(data, "full_name"),
-    name = purrr::map_chr(data, "name"),
-    image = purrr::map_chr(data, "image"),
+    member_id = purrr::map_chr(data, "member_id", .null = NA_character_),
+    house = purrr::map_chr(data, "house", .null = NA_character_),
+    first_name = purrr::map_chr(data, "first_name", .null = NA_character_),
+    last_name = purrr::map_chr(data, "last_name", .null = NA_character_),
+    constituency = purrr::map_chr(data, "constituency", .null = NA_character_),
+    party = purrr::map_chr(data, "party", .null = NA_character_),
+    entered_house = purrr::map_chr(data, "entered_house", .null = NA_character_),
+    left_house = purrr::map_chr(data, "left_house", .null = NA_character_),
+    entered_reason = purrr::map_chr(data, "entered_reason", .null = NA_character_),
+    left_reason = purrr::map_chr(data, "left_reason", .null = NA_character_),
+    person_id = purrr::map_chr(data, "person_id", .null = NA_character_),
+    title = purrr::map_chr(data, "title", .null = NA_character_),
+    lastupdate = purrr::map_chr(data, "lastupdate", .null = NA_character_),
+    full_name = purrr::map_chr(data, "full_name", .null = NA_character_),
+    name = purrr::map_chr(data, "name", .null = NA_character_),
+    image = purrr::map_chr(data, "image", .null = NA_character_),
     office = ifelse(
       has_office,
       purrr::map(
         data,
         ~ tibble::tibble(
-          moffice_id = purrr::map_chr(.x[["office"]], "moffice_id"),
-          dept = purrr::map_chr(.x[["office"]], "dept"),
-          position = purrr::map_chr(.x[["office"]], "position"),
-          from_date = purrr::map_chr(.x[["office"]], "from_date"),
-          to_date = purrr::map_chr(.x[["office"]], "to_date"),
-          person = purrr::map_chr(.x[["office"]], "person"),
-          source = purrr::map_chr(.x[["office"]], "source")
+          moffice_id = purrr::map_chr(.x[["office"]], "moffice_id", .null = NA_character_),
+          dept = purrr::map_chr(.x[["office"]], "dept", .null = NA_character_),
+          position = purrr::map_chr(.x[["office"]], "position", .null = NA_character_),
+          from_date = purrr::map_chr(.x[["office"]], "from_date", .null = NA_character_),
+          to_date = purrr::map_chr(.x[["office"]], "to_date", .null = NA_character_),
+          person = purrr::map_chr(.x[["office"]], "person", .null = NA_character_),
+          source = purrr::map_chr(.x[["office"]], "source", .null = NA_character_)
         )
       ),
       purrr::map(

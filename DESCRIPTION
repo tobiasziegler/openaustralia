@@ -1,7 +1,7 @@
 Package: openaustralia
 Type: Package
 Title: OpenAustralia API Bindings for R
-Version: 0.0.0.9021
+Version: 0.0.0.9022
 Authors@R: person("David", "Mallard",
                email = "correspondence@davidmallard.id.au",
                role = c("aut", "cre"))
