@@ -68,5 +68,6 @@ call_api <- function(endpoint, ...) {
 params_from_call <- function(mcall) {
   lst <- as.list(mcall)
   lst$endpoint <- deparse(lst[[1]]) # add endpoint to list
+  lst$tidy <- NULL # remove the non-API-related tidy element
   lst[2:length(lst)] # remove specious unnamed first element
 }
