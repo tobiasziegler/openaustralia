@@ -14,9 +14,9 @@ tidy_members <- function(data) {
   members_no_office_tbl <- tibble_members(members_no_office, FALSE)
 
   # Join the sub-tibbles back into a single dataset
-  reps_tbl <- dplyr::bind_rows(members_office_tbl, members_no_office_tbl)
+  members_tbl <- dplyr::bind_rows(members_office_tbl, members_no_office_tbl)
 
-  reps_tbl
+  members_tbl
 }
 
 #' Convert a sub-list of members into a nested tibble
