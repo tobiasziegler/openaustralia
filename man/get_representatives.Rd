@@ -5,13 +5,15 @@
 \alias{getRepresentatives}
 \title{Fetch a list of members of the House of Representatives}
 \usage{
-get_representatives(postcode = NULL, date = NULL, party = NULL,
-  search = NULL)
+get_representatives(tidy = TRUE, postcode = NULL, date = NULL,
+  party = NULL, search = NULL)
 
-getRepresentatives(postcode = NULL, date = NULL, party = NULL,
-  search = NULL)
+getRepresentatives(tidy = TRUE, postcode = NULL, date = NULL,
+  party = NULL, search = NULL)
 }
 \arguments{
+\item{tidy}{Convert the output list to a tidyverse-ready format}
+
 \item{postcode}{Fetch the list of Representatives whose electoral division
 lies within the postcode (there may be more than one)}
 

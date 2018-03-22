@@ -5,11 +5,13 @@
 \alias{getDivisions}
 \title{Fetch a list of electoral divisions}
 \usage{
-get_divisions(postcode = NULL, date = NULL, search = NULL)
+get_divisions(tidy = TRUE, postcode = NULL, date = NULL, search = NULL)
 
-getDivisions(postcode = NULL, date = NULL, search = NULL)
+getDivisions(tidy = TRUE, postcode = NULL, date = NULL, search = NULL)
 }
 \arguments{
+\item{tidy}{Convert the output list to a tidyverse-ready format}
+
 \item{postcode}{Fetch the list of electoral divisions that are within the
 given postcode (there can be more than one)}
 

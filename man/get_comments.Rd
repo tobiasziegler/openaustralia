@@ -5,13 +5,15 @@
 \alias{getComments}
 \title{Fetch comments left on OpenAustralia}
 \usage{
-get_comments(date = NULL, search = NULL, user_id = NULL, pid = NULL,
-  page = NULL, num = NULL)
+get_comments(tidy = TRUE, date = NULL, search = NULL, user_id = NULL,
+  pid = NULL, page = NULL, num = NULL)
 
-getComments(date = NULL, search = NULL, user_id = NULL, pid = NULL,
-  page = NULL, num = NULL)
+getComments(tidy = TRUE, date = NULL, search = NULL, user_id = NULL,
+  pid = NULL, page = NULL, num = NULL)
 }
 \arguments{
+\item{tidy}{Convert the output list to a tidyverse-ready format}
+
 \item{date}{Fetch the comments for this date}
 
 \item{search}{Fetch the comments that contain this term}

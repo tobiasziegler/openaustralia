@@ -5,11 +5,15 @@
 \alias{getSenators}
 \title{Fetch a list of Senators}
 \usage{
-get_senators(date = NULL, party = NULL, state = NULL, search = NULL)
+get_senators(tidy = TRUE, date = NULL, party = NULL, state = NULL,
+  search = NULL)
 
-getSenators(date = NULL, party = NULL, state = NULL, search = NULL)
+getSenators(tidy = TRUE, date = NULL, party = NULL, state = NULL,
+  search = NULL)
 }
 \arguments{
+\item{tidy}{Convert the output list to a tidyverse-ready format}
+
 \item{date}{ISO-style date, e.g. "1990-01-02", to fetch the list of Senators
 as it was on this date}
 

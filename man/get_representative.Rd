@@ -5,11 +5,15 @@
 \alias{getRepresentative}
 \title{Fetch a particular member of the House of Representatives}
 \usage{
-get_representative(id = NULL, division = NULL, always_return = NULL)
+get_representative(tidy = TRUE, id = NULL, division = NULL,
+  always_return = NULL)
 
-getRepresentative(id = NULL, division = NULL, always_return = NULL)
+getRepresentative(tidy = TRUE, id = NULL, division = NULL,
+  always_return = NULL)
 }
 \arguments{
+\item{tidy}{Convert the output list to a tidyverse-ready format}
+
 \item{id}{If you know the person ID for the member you want (returned from
 get_representatives or elsewhere), this will return data for that person}
 

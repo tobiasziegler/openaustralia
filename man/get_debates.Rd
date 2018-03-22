@@ -5,13 +5,15 @@
 \alias{getDebates}
 \title{Fetch Debates}
 \usage{
-get_debates(type = NULL, date = NULL, search = NULL, person = NULL,
-  gid = NULL, order = NULL, page = NULL, num = NULL)
+get_debates(tidy = TRUE, type = NULL, date = NULL, search = NULL,
+  person = NULL, gid = NULL, order = NULL, page = NULL, num = NULL)
 
-getDebates(type = NULL, date = NULL, search = NULL, person = NULL,
-  gid = NULL, order = NULL, page = NULL, num = NULL)
+getDebates(tidy = TRUE, type = NULL, date = NULL, search = NULL,
+  person = NULL, gid = NULL, order = NULL, page = NULL, num = NULL)
 }
 \arguments{
+\item{tidy}{Convert the output list to a tidyverse-ready format}
+
 \item{type}{One of "representatives" or "senate"}
 
 \item{date}{Fetch the debates for this date}

@@ -5,13 +5,15 @@
 \alias{getHansard}
 \title{Fetch all Hansard}
 \usage{
-get_hansard(search = NULL, person = NULL, order = NULL, page = NULL,
-  num = NULL)
+get_hansard(tidy = TRUE, search = NULL, person = NULL, order = NULL,
+  page = NULL, num = NULL)
 
-getHansard(search = NULL, person = NULL, order = NULL, page = NULL,
-  num = NULL)
+getHansard(tidy = TRUE, search = NULL, person = NULL, order = NULL,
+  page = NULL, num = NULL)
 }
 \arguments{
+\item{tidy}{Convert the output list to a tidyverse-ready format}
+
 \item{search}{Fetch the data that contain this term}
 
 \item{person}{Fetch the data by a particular person ID}

@@ -5,11 +5,13 @@
 \alias{getSenator}
 \title{Fetch a particular Senator}
 \usage{
-get_senator(id = NULL)
+get_senator(tidy = TRUE, id = NULL)
 
-getSenator(id = NULL)
+getSenator(tidy = TRUE, id = NULL)
 }
 \arguments{
+\item{tidy}{Convert the output list to a tidyverse-ready format}
+
 \item{id}{If you know the person ID for the Senator you want, this will
 return data for that person}
 }
