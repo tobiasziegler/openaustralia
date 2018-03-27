@@ -11,7 +11,7 @@ tidy_members(data)
 list representing a member}
 }
 \value{
-A tibble with each member represented by one row
+A tibble with each member represented by one row.
 }
 \description{
 Process nested list data of members and return a tidy nested tibble

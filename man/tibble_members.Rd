@@ -2,21 +2,17 @@
 % Please edit documentation in R/tidy-members.R
 \name{tibble_members}
 \alias{tibble_members}
-\title{Convert a sub-list of members into a nested tibble}
+\title{Convert a list of members into a nested tibble}
 \usage{
-tibble_members(data, has_office)
+tibble_members(data)
 }
 \arguments{
 \item{data}{A nested list (list of lists) with each item in the top-level
-list representing a member. All members must have office data or must not
-have office data}
-
-\item{has_office}{A boolean value indicating whether the sub-list contains
-office data}
+list representing a member.}
 }
 \value{
-A tibble with each member represented by one row
+A tibble with each member represented by one row.
 }
 \description{
-Convert a sub-list of members into a nested tibble
+Convert a list of members into a nested tibble
 }
