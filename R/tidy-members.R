@@ -78,7 +78,7 @@ tibble_office <- function(data) {
 #'
 #' @return A tibble with column types converted and NA values applied.
 type_convert_members <- function(data) {
-  converted_data <- readr::type_convert(
+  readr::type_convert(
     data,
     col_types = readr::cols(
       member_id = readr::col_integer(),
@@ -100,8 +100,6 @@ type_convert_members <- function(data) {
     ),
     na = c("", "NA", "9999-12-31")
   )
-
-  converted_data
 }
 
 
@@ -113,7 +111,7 @@ type_convert_members <- function(data) {
 #'
 #' @return A tibble with column types converted and NA values applied.
 type_convert_offices <- function(data) {
-  converted_data <- readr::type_convert(
+  readr::type_convert(
     data,
     col_types = readr::cols(
       moffice_id = readr::col_integer(),
@@ -126,6 +124,4 @@ type_convert_offices <- function(data) {
     ),
     na = c("", "NA", "9999-12-31")
   )
-
-  converted_data
 }
