@@ -4,8 +4,11 @@
 #'   list representing a member
 #' @return A tibble with each member represented by one row.
 tidy_members <- function(data) {
-  tibble_members(data) %>% # Convert the list into a tibble
-    type_convert_members() # Convert column data types
+  tibble_members(data) %>%     # Convert the list into a tibble
+    type_convert_members() %>% # Convert column data types
+    dplyr::mutate(             # Convert types in each nested office tibble
+      office = purrr::map(office, type_convert_offices)
+    )
 }
 
 #' Convert a list of members into a nested tibble
@@ -94,6 +97,32 @@ type_convert_members <- function(data) {
       full_name = readr::col_character(),
       name = readr::col_character(),
       image = readr::col_character()
+    ),
+    na = c("", "NA", "9999-12-31")
+  )
+
+  converted_data
+}
+
+
+#' Convert the column types for a tibble of offices from strings (character) to
+#' integers, dates, etc., and replace empty strings and dummy dates with NA
+#' values.
+#'
+#' @param data A tibble with each office represented by one row.
+#'
+#' @return A tibble with column types converted and NA values applied.
+type_convert_offices <- function(data) {
+  converted_data <- readr::type_convert(
+    data,
+    col_types = readr::cols(
+      moffice_id = readr::col_integer(),
+      dept = readr::col_character(),
+      position = readr::col_character(),
+      from_date = readr::col_date(),
+      to_date = readr::col_date(),
+      person = readr::col_character(),
+      source = readr::col_character()
     ),
     na = c("", "NA", "9999-12-31")
   )
