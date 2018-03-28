@@ -17,6 +17,5 @@ getSenator <- function(tidy = TRUE, id = NULL) {
   if (!tidy)
     return(response)
 
-  # TODO: Convert list data to tidy format
-  response
+  tidy_members(response)
 }

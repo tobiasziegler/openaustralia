@@ -23,6 +23,14 @@ getRepresentative <- function(tidy = TRUE, id = NULL, division = NULL,
   if (!tidy)
     return(response)
 
-  # TODO: Convert list data to tidy format
-  response
+  # If search is based on a division parameter, the API returns a single
+  # object. But if given a person ID, the returned object is wrapped in an
+  # array. For the former case, the single-member list needs to be nested
+  # inside another list to match the list structure expected by the tidying
+  # function.
+  if (is.null(id)) {
+    tidy_members(list(response))
+  } else {
+    tidy_members(response)
+  }
 }
