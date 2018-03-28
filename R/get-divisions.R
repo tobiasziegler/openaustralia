@@ -23,6 +23,5 @@ getDivisions <- function(tidy = TRUE, postcode = NULL, date = NULL,
   if (!tidy)
     return(response)
 
-  # TODO: Convert list data to tidy format
-  response
+  tidy_divisions(response)
 }
