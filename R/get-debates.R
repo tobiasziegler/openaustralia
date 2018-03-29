@@ -29,6 +29,11 @@ getDebates <- function(tidy = TRUE, type = NULL, date = NULL, search = NULL,
   if (!tidy)
     return(response)
 
-  # TODO: Convert list data to tidy format
+  # The structure of the returned JSON depends on which parameters are passed.
+  # TODO: Add conversion to an appropriate data structure for all parameters.
+  if (!is.null(date)) {
+    return(tidy_debates_by_date(response))
+  }
+
   response
 }
